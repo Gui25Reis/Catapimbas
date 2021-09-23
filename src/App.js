@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/fonts.css'
 
 function App() {
   
