@@ -64,4 +64,4 @@ Esse projeto é licenciado pela [GNU General Public License v3.0](https://github
         </a>
         </td>
     </tr>
-</table>
+</table>s
