@@ -1,38 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Gluten;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background-image: url(../src/public/background.png);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 96px;
+  color: wheat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.buttons {
+  width: 50rem;
+  height: 20rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons .createRoom {
+  width: 30rem;
+  height: 10rem;
+
+  margin: 1rem 0rem;
+
+  border-radius: 20px;
+
+  background-color: wheat;
+
+  font-size: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons form input {
+  width: 22rem;
+  height: 3rem;
+
+  font-size: 24px;
+  outline: none;
+  text-align: center;
+  color: black;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+
+  background-color: wheat;
+}
+
+.enterRoom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.enterRoom button {
+  height: 3rem;
+  width: 8rem;
+
+  background-color: wheat;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  outline-style: none;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+
+  cursor: pointer;
 }
