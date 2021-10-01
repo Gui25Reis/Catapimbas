@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(../src/public/background.png);
+  background-image: url(../public/background.png);
 }
 
 .App h1 {
@@ -41,6 +41,8 @@
 
   background-color: wheat;
   font-size: 36px;
+
+  cursor: pointer;
 }
 
 .buttons form input {
@@ -81,6 +83,4 @@
   border-top: none;
   border-bottom: none;
   border-right: none;
-
-  cursor: pointer;
 }

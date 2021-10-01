@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./App.css";
+import "./styles/App.css";
 import "./styles/fonts.css";
 
 function App() {
@@ -31,7 +31,11 @@ function App() {
   <div className="App">
     <h1>Catapimbas</h1>
     <div className="buttons">
-      <button className="createRoom">Criar Sala</button>
+      <button 
+        className="createRoom"
+      >
+        Criar Sala
+      </button>
       <div className="enterRoom">
         <form>
           <input
@@ -49,7 +53,7 @@ function App() {
             style = {isFocused ? {backgroundColor: "#83bfe2"} : {}}
           />
         </form>
-        <button>
+        <button style = {count === 5 ? {cursor: 'pointer'} : {}} >
           {count === 5 ? "➜" : ""}
         </button>
       </div>
@@ -59,3 +63,4 @@ function App() {
 }
 
 export default App;
+
