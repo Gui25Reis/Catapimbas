@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.buttons form input {
+.buttons form #key {
   width: 22rem;
   height: 3rem;
 
@@ -68,7 +68,7 @@
   align-items: center;
 }
 
-.enterRoom button {
+.enterRoom form #pointerButton {
   height: 3rem;
   width: 8rem;
 
@@ -79,6 +79,7 @@
 
   font-size: 20px;
   font-weight: 900;
+  text-align: center;
 
   border-top: none;
   border-bottom: none;
