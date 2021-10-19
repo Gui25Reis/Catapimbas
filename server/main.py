@@ -1,76 +1,90 @@
-from Mesa import Mesa
-from Carta import Carta
 from typing import List
-from Jogador import Jogador
-from Baralho import Baralho
-from random import shuffle
+from random import shuffle, triangular
+
+from Card import Card
+from Deck import Deck
+from Player import Player
+from Game import Game
 
 def main():
-    # Cria o baralho
-    baralho: Baralho = Baralho()
 
-    # Define os jogadores da mesa
-    jogadores: List[Jogador] = []
-    for _ in range(4):
-        j: Jogador = Jogador(3, [])
-        jogadores.append(j)
+    num_players = int(input("Quantidade de jogadores: "))
+    num_lifes = int(input("Quatidade de vidas para cada jogador: "))
+    max_hand = int(39/num_players)
+    num_hand = 1
+    is_increasing = True
 
-    # Embraralha as cartas
-    shuffle(baralho.cartas)
+    game = Game()
 
-    # Distribuir cartas para os jogadores
-    for i in range(len(jogadores)):
-        mao: List[Carta] = []
-        for j in range(3):
-            carta = baralho.cartas.pop()
-            carta.jogador = i
-            mao.append(carta)
-        jogadores[i].cartas = mao
+    players: List[Player] = []
+    for _ in range(num_players):
+        player = Player(num_lifes)
+        players.append(player)
 
-    # Define a vira
-    vira = baralho.cartas.pop()
+    while len(players) > 1:
+        deck = Deck()
+        shuffle(deck.cards)
+        for i in range(len(players)):
+            hand: List[Card] = []
+            for _ in range(num_hand):
+                card = deck.cards.pop()
+                card.player = i
+                hand.append(card)
+            players[i].cards = hand.copy()
 
-    # Cria a mesa
-    mesa = Mesa([], vira)
+        # Define a vira
+        vira: Card = deck.cards.pop()
 
-    # for i in range(len(baralho.cartas)):
-    #     print(f"{baralho.cartas[i].num}{baralho.cartas[i].naipe}", end=" ")
+        # Cria a mesa
 
-    print()
-    print()
-
-    # Exibe as cartas de cada jogador
-    for i in range(len(jogadores)):
-        print(f"Jogador {i}:")
-        for j in range(3):
-            print(f"{jogadores[i].cartas[j].num}{jogadores[i].cartas[j].naipe}", end=" ")
         print()
         print()
 
-    # Inicia as rodadas
-    for i in range(3):
-        print("Mesa")
-        print()
-        print("Vira: ", end="")
-        print(f"{mesa.vira.num}{mesa.vira.naipe}")
-        print()
-        # Turnos
-        print("Cartas jogadas:")
-        for j in range(len(jogadores)):
-            print(f"Jogador {j}: ", end="")
-            escolha = int(input())
-            while escolha < 0 or escolha > 2-i:
-                print("Carta inválida! Tente novamente: ", end="")
-                escolha = int(input())
-            mesa.cartas.append(jogadores[j].cartas.pop(escolha))
-            print(f"Jogador {j}: {mesa.cartas[j].num}{mesa.cartas[j].naipe}\n")
-        print()
-        print("Ganhador:")
-        ganhador: int = mesa.ganhador()
-        print(f"Jogador {ganhador}: {mesa.cartas[ganhador].num}{mesa.cartas[ganhador].naipe}")
-        print()
-        mesa.cartas.clear()
-        jogadores.append(jogadores.pop())
+        # Exibe as cartas de cada jogador
+        for i in range(len(players)):
+            print(f"Jogador {i}:")
+            for j in range(num_hand):
+                print(f"{players[i].cards[j].num}{players[i].cards[j].suit}", end=" ")
+            print()
+            print()
+
+        # Inicia as rodadas
+        for i in range(num_hand):
+            print("Vira: ", end="")
+            print(f"{game.vira.num}{game.vira.suit}")
+            print()
+            # Turnos
+            print("Cartas jogadas:")
+            for j in range(len(players)):
+                print(f"Jogador {j}: ", end="")
+                opt: int = int(input())
+                while opt < 0 or opt > num_hand-1-i:
+                    print("Carta inválida! Tente novamente: ", end="")
+                    opt: int = int(input())
+                game.push_card(players[j].cards.pop(opt))
+                # print(f"Jogador {j}: {game.cards[j].num}{game.cards[j].suit}\n")
+            print()
+            print("Ganhador:")
+            highest_card: Card = game.highest_card()
+            players[highest_card.player].add_point()
+            print(f"Jogador {highest_card.player}: {highest_card.num}{highest_card.suit}")
+            print()
+            game.clear()
+            players.append(players.pop())
+        
+        game.reset()
+
+        for player in players:
+            player.update_lifes()
+        
+        if is_increasing:
+            num_hand += 1
+            if num_hand+1 > max_hand:
+                is_increasing = False
+        else:
+            num_hand -= 1
+            if num_hand-1 < 1:
+                is_increasing = True
 
 if __name__ == "__main__":
     main()
