@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./App.css";
+import "./styles/App.css";
 import "./styles/fonts.css";
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
     setIsFocused(false);
   }
 
-  function handleInputChange(e) {
+  function handleInputChange() {
     var input = document.getElementById('key').value.length;
     setCount(input);
   }
 
   function handleKeyDown (event) {
-    const badCharacter = ' '
+    const badCharacter = ' ';
     if(event.nativeEvent.key === badCharacter){
       event.preventDefault();
     }
@@ -31,7 +31,11 @@ function App() {
   <div className="App">
     <h1>Catapimbas</h1>
     <div className="buttons">
-      <button className="createRoom">Criar Sala</button>
+      <button 
+        className="createRoom"
+      >
+        Criar Sala
+      </button>
       <div className="enterRoom">
         <form>
           <input
@@ -46,12 +50,14 @@ function App() {
             onBlur={handleInputBlur}
             onInputCapture={handleInputChange}
             onKeyDownCapture={handleKeyDown}
-            style = {isFocused ? {backgroundColor: "#83bfe2"} : {}}
-          />
+            style = {isFocused ? {backgroundColor: "#83bfe2"} : {}}/>
+          <input 
+            type="button"
+            id = "pointerButton"
+            value = {count === 5 ? "➜" : ""}
+            style = {count === 5 ? {cursor: 'pointer'} : {}} >
+          </input>
         </form>
-        <button>
-          {count === 5 ? "➜" : ""}
-        </button>
       </div>
     </div>
   </div>
@@ -59,3 +65,4 @@ function App() {
 }
 
 export default App;
+
