@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(../public/background.png);
+  background-image: url(../assets/Background/fundo.svg);
 }
 
 .App h1 {

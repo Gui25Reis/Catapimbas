@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Gluten;
+    user-select: none;
+}
+
+.createRoom {
+    height: 100vh;
+    background-image: url(../assets/Background/fundo.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundoMenu {
+    width: 85vw;
+    height: 85vh;
+    background-color: wheat;
+    border-radius: 25px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundoMenu h1 {
+    margin-top: 30px;
+    font-size: 96px;
+    color: rgb(65, 32, 9);
+    position: absolute;
+    margin-top: 7rem;
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.senha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.senha p {
+    font-size: 40px;
+}
+
+#senha {
+    background-color: wheat;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
+    width: 20rem;
+    height: 3rem;
+    padding: 0px 10px;
+    outline-style: none;
+    text-align: center;
+}
+
+.qtd {
+    display: flex;
+    align-items: center;
+}
+
+.qtd p {
+    font-size: 35px;
+}
+
+#qtdJogadores {
+    background-color: wheat;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
+    width: 5rem;
+    height: 3rem;
+    padding: 0px 10px;
+    outline-style: none;
+    text-align: center;
+}
