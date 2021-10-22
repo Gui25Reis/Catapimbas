@@ -4,8 +4,8 @@ from Card import Card
 
 class Game:
     
-    def __init__(self):
-        # self.vira: Card = Card()
+    def __init__(self, vira: Card):
+        self.vira: Card = vira
         self.cards: List[Card] = []
         self.manilhas: List[Card] = []
 
@@ -35,7 +35,7 @@ class Game:
         is_highest = True
         if card.num == self.manilha_num:
             for i in range(len(self.manilhas)):
-                if self.suit_order.index(card.suit) < self.suit_order.index(self.manilhas[i].num):
+                if self.suit_order.index(card.suit) < self.suit_order.index(self.manilhas[i].suit):
                     self.manilhas.insert(i, card)
                     is_highest = False
                     break

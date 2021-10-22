@@ -13,8 +13,7 @@ def main():
     max_hand = int(39/num_players)
     num_hand = 1
     is_increasing = True
-
-    game = Game()
+    accumulated_meladas = 0
 
     players: List[Player] = []
     for _ in range(num_players):
@@ -34,8 +33,7 @@ def main():
 
         # Define a vira
         vira: Card = deck.cards.pop()
-
-        # Cria a mesa
+        game = Game(vira)
 
         print()
         print()
@@ -62,17 +60,22 @@ def main():
                     print("Carta inválida! Tente novamente: ", end="")
                     opt: int = int(input())
                 game.push_card(players[j].cards.pop(opt))
-                # print(f"Jogador {j}: {game.cards[j].num}{game.cards[j].suit}\n")
             print()
             print("Ganhador:")
             highest_card: Card = game.highest_card()
-            players[highest_card.player].add_point()
-            print(f"Jogador {highest_card.player}: {highest_card.num}{highest_card.suit}")
+            if highest_card is None:
+                accumulated_meladas += 1
+                print("MELOU TUDO!")
+            else:
+                if accumulated_meladas > 0:
+                    for i in range(accumulated_meladas):
+                        players[highest_card.player].add_point()
+                else:
+                    players[highest_card.player].add_point()
+                print(f"Jogador {highest_card.player}: {highest_card.num}{highest_card.suit}")
             print()
             game.clear()
             players.append(players.pop())
-        
-        game.reset()
 
         for player in players:
             player.update_lifes()
