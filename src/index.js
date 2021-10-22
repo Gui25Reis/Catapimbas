@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-// import App from './App';
-import Game from  './game/game.js'
+
+import Menu from './Menu';
+// import Game from  './game/Game.js'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Game />
+    <Menu />
   </React.StrictMode>,
   document.getElementById('root')
 );

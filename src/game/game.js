@@ -8,7 +8,7 @@ import Player from '../components/player';
 const Game = () => {
     const Timer = () => {
         const initialSeconds = 60;
-        const [seconds, setSeconds ] = useState(initialSeconds);
+        const [seconds, setSeconds] = useState(initialSeconds);
         useEffect(()=>{
         let myInterval = setInterval(() => {
                 if (seconds > 0) {

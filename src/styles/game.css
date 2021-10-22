@@ -24,7 +24,7 @@
 }
 
 .menu {
-    width: 8rem;
+    width: 12rem;
     height: 3rem;
 
     border: 1px solid black;
@@ -59,7 +59,7 @@
 }
 
 #playerLives {
-    width: 8rem;
+    width: 12rem;
     height: 3rem;
     border: 1px solid black;
     background-color: wheat;

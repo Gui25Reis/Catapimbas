@@ -1,11 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Gluten;
+  font-family: Quicksand;
   user-select: none;
 }
 
-.App {
+.Menu {
   height: 100vh;
 
   display: flex;
@@ -13,43 +13,72 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(../public/background.png);
+  background-image: url(../assets/Background/fundo.svg);
 }
 
-.App h1 {
+.Menu h1 {
   font-size: 96px;
+  font-family: Balsamiq Sans;
   color: wheat;
 }
 
-.buttons {
+#informations {
   width: 50rem;
   height: 20rem;
 
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  margin-bottom: 5rem;
 }
 
-.buttons .createRoom {
+#informations #playerName {
   width: 30rem;
-  height: 10rem;
+  height: 4rem;
+
+  font-size: 32px;
+  outline: none;
+  text-align: center;
+  color: black;
+
+  border-radius: 20px;
+  border: none;
+
+  background-color: wheat;
+}
+
+#informations #createRoom {
+  width: 30rem;
+  height: 4rem;
 
   margin: 1rem 0rem;
 
   border-radius: 20px;
+  border: none;
 
   background-color: wheat;
-  font-size: 36px;
+  font-size: 32px;
+  font-weight: 600;
 
   cursor: pointer;
 }
 
-.buttons form #key {
-  width: 22rem;
-  height: 3rem;
+#informations #createRoom:hover {
+  background-color: rgb(138, 251, 242);
+}
 
-  font-size: 24px;
+#informations #codeInput {
+  display: flex;
+  flex-direction: row;
+}
+
+#informations #key {
+  width: 22rem;
+  height: 4rem;
+
+  font-size: 32px;
   outline: none;
   text-align: center;
   color: black;
@@ -61,27 +90,24 @@
   background-color: wheat;
 }
 
-.enterRoom {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-}
-
-.enterRoom form #pointerButton {
-  height: 3rem;
+#informations #pointerButton {
   width: 8rem;
+  height: 4rem;
 
   background-color: wheat;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   outline-style: none;
 
-  font-size: 20px;
+  font-family: none;
+  font-size: 32px;
   font-weight: 900;
   text-align: center;
 
   border-top: none;
   border-bottom: none;
   border-right: none;
+  
+  display: flex;
+  justify-content: center;
 }
