@@ -1,6 +1,9 @@
 ## Arquivos do Mac
 *.DS_Store
 
+## Python
+/__pycache__
+/.vscode
 
 ## Arquivos de configuração
 *.asta
