@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
-import "./styles/Menu.css";
-import "./styles/fonts.css";
+import {
+  Link
+} from 'react-router-dom';
+
+import "../styles/Menu.css";
+import "../styles/fonts.css";
 
 function Menu() {
   const [isNameFocused, setIsNameFocused] = useState(false);
@@ -38,11 +42,13 @@ function Menu() {
   <div className="Menu">
     <h1>Catapimbas</h1>
     <form id="informations">
-      {/* <label for="name">Coloque o nome:</label> */}
+      
       <input
+        required
         type="text"
         id="playerName"
         name="key"
+        length="15"
         autoComplete="off"
         pattern="[a-zA-Z0-9]+"
         placeholder="Coloque o nome"
@@ -73,13 +79,14 @@ function Menu() {
             onKeyDownCapture={handleKeyDown}
             style = {isCodeFocused ? {backgroundColor: "#83bfe2"} : {}}
           />
-
-          <input 
-            type="button"
-            id = "pointerButton"
-            value = "➜"
-            style = {count === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "bold"} : {color: "#757575"}} 
-          />
+          <Link to={count === 5 ? "/game" : '#'}> 
+            <input 
+              type="submit"
+              id = "pointerButton"
+              value = "➜"
+              style = {count === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "bold"} : {color: "#757575"}} 
+            />
+          </Link>
         </div>
       </div>
     </form>

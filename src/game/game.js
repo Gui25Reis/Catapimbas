@@ -156,7 +156,7 @@ const Game = () => {
                         
                     </div>
 
-                    <div className="chatFooter" >
+                    <div className="chatFooter">
                             <form onSubmit={CreateMessage}> 
                                 <input 
                                     className="chatInput" 
