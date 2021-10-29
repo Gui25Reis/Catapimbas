@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 
 import {
-  Link
+  Link,
+  withRouter
 } from 'react-router-dom';
 
-import "../styles/Menu.css";
+import "../styles/menu.css";
 import "../styles/fonts.css";
 
-function Menu() {
+const Menu = () => {
   const [isNameFocused, setIsNameFocused] = useState(false);
+  const [name, setName] = useState(0);
+
   const [isCodeFocused, setIsCodeFocused] = useState(false);
-  const [count, setCount] = useState(0);
+  const [code, setCode] = useState(0);
 
   function handleInputFocus(e) {
     if(e.target.id === 'playerName')
@@ -26,12 +29,15 @@ function Menu() {
       setIsCodeFocused(false);
   }
 
-  function handleInputChange() {
-    var input = document.getElementById('key').value.length;
-    setCount(input);
+  function handleInputChange(e) {
+    var input = document.getElementById(e.target.id).value.length;
+    if(e.target.id === "key")
+      setCode(input);
+    else
+      setName(input)
   }
 
-  function handleKeyDown (event) {
+  function handleKeyDown(event) {
     const badCharacter = ' ';
     if(event.nativeEvent.key === badCharacter){
       event.preventDefault();
@@ -42,19 +48,18 @@ function Menu() {
   <div className="Menu">
     <h1>Catapimbas</h1>
     <form id="informations">
-      
       <input
         required
         type="text"
         id="playerName"
         name="key"
-        length="15"
+        maxLength="15"
         autoComplete="off"
         pattern="[a-zA-Z0-9]+"
         placeholder="Coloque o nome"
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
-        onInputCapture={handleInputChange}
+        onInput={handleInputChange}
         onKeyDownCapture={handleKeyDown}
         style = {isNameFocused ? {backgroundColor: "#83bfe2"} : {}}
       />
@@ -66,6 +71,7 @@ function Menu() {
         />
         <div id="codeInput"> 
           <input
+            required
             type="text"
             id="key"
             name="key"
@@ -75,17 +81,18 @@ function Menu() {
             placeholder="Coloque o código"
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
-            onInputCapture={handleInputChange}
+            onInput={handleInputChange}
             onKeyDownCapture={handleKeyDown}
             style = {isCodeFocused ? {backgroundColor: "#83bfe2"} : {}}
           />
-          <Link to={count === 5 ? "/game" : '#'}> 
+          <Link to={code === 5 && name > 0 ? "/game" : '#'}> 
             <input 
               type="submit"
               id = "pointerButton"
               value = "➜"
-              style = {count === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "bold"} : {color: "#757575"}} 
-            />
+              style = {code === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "bold"} : {color: "#757575"}} 
+            > 
+            </input>
           </Link>
         </div>
       </div>
@@ -94,5 +101,5 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default withRouter(Menu);
 

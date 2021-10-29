@@ -1,9 +1,10 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../styles/game.css'
 
-import Card from '../components/card';
-import Player from '../components/player';
+import Card from '../components/Card';
+import MiniCard from '../components/MiniCard';
+import Player from '../components/Player';
 
 const Game = () => {
     const Timer = () => {
@@ -87,8 +88,7 @@ const Game = () => {
     })
 
     document.addEventListener('click', (e) => {
-        
-        if(e.target.tagName === "INPUT"){
+        if(e.target.className === "chatInput" || e.target.className === "buttonInput"){
             changeChat(true)
         }
         else
@@ -113,11 +113,43 @@ const Game = () => {
 
             <div id="main">
                 <div id="table">
+                    <div id="turned">
+                        <MiniCard type="C01Mini" honeydew={false} />
+                    </div>
+                    <div id="mainCard">
 
+                    </div>
+                    <div id="card0">
+                        <MiniCard type="P02Mini" honeydew={true} />
+                    </div>
+                    <div id="card1">
+                        <MiniCard type="E03Mini" honeydew={true} />
+                    </div>
+                    <div id="card2">
+                        <MiniCard type="C04Mini" honeydew={false} />
+                    </div>
+                    <div id="card3">
+                        <MiniCard type="E05Mini" honeydew={false} />
+                    </div>
+                    <div id="card4">
+                        <MiniCard type="E06Mini" honeydew={false} />
+                    </div>
+                    <div id="card5">
+                        <MiniCard type="O07Mini" honeydew={false} />
+                    </div>
+                    <div id="card6">
+                        <MiniCard type="P03Mini" honeydew={true} />
+                    </div>
+                    <div id="card7">
+                        <MiniCard type="C02Mini" honeydew={true} />
+                    </div>
+                    <div id="card8">
+                        <MiniCard type="O04Mini" honeydew={true} />
+                    </div>
                 </div>          
 
                 <div id="mainPlayer">
-                    <Player name="NomeDoJogador2" life={3}  />
+                    <Player name="Player" life={3}  />
                 </div>
 
                 <div id="player0">
@@ -147,7 +179,6 @@ const Game = () => {
                 <div id="player8">
                     <Player name="NomeDoJogador" life={3} />
                 </div>
-
             </div>
 
             <div className="footer">

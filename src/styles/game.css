@@ -102,9 +102,71 @@
     background-image: url(../assets/mesa.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 60vw 40vh;
+    background-size: 60vw 50vh;
 
     grid-area: table;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    grid-template:
+		". card0 card1 card2 ." 5fr
+		"card3 . . . card4" 2fr
+        ". . turned . ." 1fr
+        "card5 . . . card6" 2fr
+		". card7 card card8 ." 5fr
+		/* / 1fr 1fr 1fr 1fr 1fr; */
+}
+
+#turned{
+    grid-area: turned;
+}
+
+#mainCard {
+    margin-bottom: 1rem;
+	grid-area: card;
+}
+
+#card0 {
+    margin-top: 1rem;
+	grid-area: card0;
+}
+
+#card1 {
+    margin-top: 1rem;
+	grid-area: card1;
+}
+
+#card2 {
+    margin-top: 1rem;
+	grid-area: card2;
+}
+
+#card3 {
+	grid-area: card3;
+}
+
+#card4 {
+	grid-area: card4;
+}
+
+#card5 {
+	grid-area: card5;
+}
+
+#card6 {
+	grid-area: card6;
+}
+
+#card7 {
+    margin-bottom: 1rem;
+	grid-area: card7;
+}
+
+#card8 {
+    margin-bottom: 1rem;
+	grid-area: card8;
 }
 
 #mainPlayer {

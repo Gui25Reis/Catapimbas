@@ -8,11 +8,9 @@ const Card = (props) => {
             <img 
                 src={require(`../assets/Cartas/${props.type}.svg`).default} 
                 alt="Carta"
-                id = "teste"
                 draggable="false" 
                 onClick={() => {
                     var el = document.getElementById(props.type)
-                    // createcard(props.type)
                     el.remove();
                 }}
             />
