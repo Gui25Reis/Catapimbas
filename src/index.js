@@ -8,6 +8,7 @@ import {
 
 import './styles/index.css';
 
+import Create from './game/Create.js'
 import Menu from './game/Menu.js';
 import Game from  './game/Game.js'
 
