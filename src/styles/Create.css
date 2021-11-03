@@ -8,78 +8,114 @@
 .createRoom {
     height: 100vh;
     background-image: url(../assets/Background/fundo.svg);
-    display: flex;
-    justify-content: center;
+    background-size: cover;
+    display: flex;  
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.fundoMenu {
-    width: 85vw;
-    height: 85vh;
-    background-color: wheat;
-    border-radius: 25px;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column ;
-    justify-content: center;
-    align-items: center;
-}
-
-.fundoMenu h1 {
-    margin-top: 30px;
-    font-size: 96px;
-    color: rgb(65, 32, 9);
-    position: absolute;
-    margin-top: 7rem;
-    top: 0;
-}
-
-.menu {
-    display: flex;
     flex-direction: column;
 }
 
-.senha {
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
+.createRoom h1 {
+    font-size: 96px;
+    color: wheat;
 }
 
-.senha p {
+.menu {
+    background-color: wheat;
+    /* width: 30vw;
+    height: 30vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.qtPlayers {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qtPlayers p {
     font-size: 40px;
 }
 
-#senha {
+#players {
     background-color: wheat;
-    font-size: 20px;
-    border: 3px solid black;
-    border-radius: 20px;
-    margin-left: 10px;
-    width: 20rem;
-    height: 3rem;
-    padding: 0px 10px;
-    outline-style: none;
+    width: 5rem;
+    height: 3.5rem;
+    font-size: 30px;
     text-align: center;
+    outline-style: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
-.qtd {
+.qtLives {
+    width: 30rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.qtd p {
-    font-size: 35px;
+.qtLives p {
+    font-size: 40px;
 }
 
-#qtdJogadores {
+#lives {
     background-color: wheat;
-    font-size: 20px;
-    border: 3px solid black;
-    border-radius: 20px;
-    margin-left: 10px;
     width: 5rem;
-    height: 3rem;
-    padding: 0px 10px;
-    outline-style: none;
+    height: 3.5rem;
+    font-size: 30px;
     text-align: center;
+    outline-style: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.menuOptions {
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.menuButtons {
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonCreate {
+    background-color: wheat;
+    font-size: 25px;
+    width: 14rem;
+    height: 5rem;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.buttonCreate:hover {
+    background-color: rgb(138, 251, 242);
+    cursor: pointer;
+}
+
+.back {
+    background-color: wheat;
+    font-size: 25px;
+    width: 14rem;
+    height: 5rem;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.back:hover {
+    background-color: rgb(253, 135, 135);
+    cursor: pointer;
 }

@@ -6,16 +6,12 @@ import "../styles/fonts.css";
 function Create() {
     return(
         <div className="createRoom">
-            <div className="fundoMenu">
-                <h1 className="titulo">Catapimbas</h1>
-                <div className="menu"> 
-                    <div className="senha">
-                        <p>Criar Senha:</p>
-                        <input id="senha" placeholder="Coloque a Senha"></input>
-                    </div>
-                    <div className="qtd">
+            <h1>Catapimbas</h1>
+            <div className="menu">
+                <div className="menuOptions">
+                    <div className="qtPlayers">
                         <p>N.º de Jogadores:</p>
-                        <select id="qtdJogadores">
+                        <select id="players">
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
@@ -27,6 +23,20 @@ function Create() {
                             <option>10</option>
                         </select>
                     </div>
+                    <div className="qtLives">
+                    <p>N.º de Vidas:</p>
+                    <select id="lives">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="menuButtons">
+                    <button className="back">Voltar</button>
+                    <button className="buttonCreate">Criar Sala</button>
                 </div>
             </div>
         </div>
