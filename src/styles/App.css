@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  background-image: url(../public/background.png);
+  background-image: url(../assets/Background/fundo.svg);
 }
 
 .App h1 {
@@ -57,7 +57,7 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border: none;
-
+  
   background-color: wheat;
 }
 
@@ -66,6 +66,10 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+}
+
+.enterRoom form {
+  display: flex;
 }
 
 .enterRoom form #pointerButton {
@@ -85,3 +89,4 @@
   border-bottom: none;
   border-right: none;
 }
+
