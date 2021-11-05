@@ -3,7 +3,6 @@ from typing import Dict, List
 from Card import Card
 
 class Game:
-    
     def __init__(self, vira: Card):
         self.vira: Card = vira
         self.cards: List[Card] = []

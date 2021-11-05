@@ -1,5 +1,4 @@
 class Card:
-
     def __init__(self, num: int, suit: int) -> None:
         self.num: str = ""
         self.suit: str = ""
