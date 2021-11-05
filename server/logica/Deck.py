@@ -1,13 +1,13 @@
 from typing import List
-from Carta import Carta
 
-class Baralho:
+from Card import Card
 
+class Deck:
     def __init__(self) -> None:
-        self.cartas: List[Carta] = []
+        self.cards: List[Card] = []
         
         for i in range(4):
             for j in range(13):
                 if j not in [7, 8, 9]:
-                    carta = Carta(j, i)
-                    self.cartas.append(carta)
+                    card = Card(j, i)
+                    self.cards.append(card)
