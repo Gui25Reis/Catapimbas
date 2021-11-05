@@ -1,5 +1,5 @@
 from typing import List
-from random import shuffle, triangular
+from random import shuffle
 
 from Card import Card
 from Deck import Deck
@@ -7,7 +7,6 @@ from Player import Player
 from Game import Game
 
 def main():
-
     num_players = int(input("Quantidade de jogadores: "))
     num_lifes = int(input("Quatidade de vidas para cada jogador: "))
     max_hand = int(39/num_players)
@@ -35,22 +34,25 @@ def main():
         vira: Card = deck.cards.pop()
         game = Game(vira)
 
-        print()
-        print()
+        print(f"\nVira: {game.vira.num}{game.vira.suit}\n")
 
         # Exibe as cartas de cada jogador
         for i in range(len(players)):
-            print(f"Jogador {i}:")
+            print(f"JOGADOR {i}")
+            print(f"Vidas: {players[i].lifes}")
+            print(f"Pontos: {players[i].points}")
+            print(f"Cartas: ", end="")
             for j in range(num_hand):
                 print(f"{players[i].cards[j].num}{players[i].cards[j].suit}", end=" ")
             print()
             print()
 
+        # Pontos de cada jogador
+        for i in range(len(players)):
+            players[i].points = int(input(f"Quantos pontos o JOGADOR {i} fará?: "))
+
         # Inicia as rodadas
         for i in range(num_hand):
-            print("Vira: ", end="")
-            print(f"{game.vira.num}{game.vira.suit}")
-            print()
             # Turnos
             print("Cartas jogadas:")
             for j in range(len(players)):
