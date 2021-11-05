@@ -40,16 +40,19 @@ def main():
         for i in range(len(players)):
             print(f"JOGADOR {i}")
             print(f"Vidas: {players[i].lifes}")
-            print(f"Pontos: {players[i].points}")
             print(f"Cartas: ", end="")
             for j in range(num_hand):
                 print(f"{players[i].cards[j].num}{players[i].cards[j].suit}", end=" ")
-            print()
-            print()
+            print("\n")
 
         # Pontos de cada jogador
         for i in range(len(players)):
-            players[i].points = int(input(f"Quantos pontos o JOGADOR {i} fará?: "))
+            players[i].target_points = int(input(f"Quantos pontos o JOGADOR {i} fará?: "))
+        print()
+
+        for i in range(len(players)):
+            print(f"JOGADOR {i}")
+            print(f"Pontos: {players[i].target_points}\n")
 
         # Inicia as rodadas
         for i in range(num_hand):
@@ -62,8 +65,7 @@ def main():
                     print("Carta inválida! Tente novamente: ", end="")
                     opt: int = int(input())
                 game.push_card(players[j].cards.pop(opt))
-            print()
-            print("Ganhador:")
+            print("\nGanhador:")
             highest_card: Card = game.highest_card()
             if highest_card is None:
                 accumulated_meladas += 1
@@ -75,7 +77,6 @@ def main():
                 else:
                     players[highest_card.player].add_point()
                 print(f"Jogador {highest_card.player}: {highest_card.num}{highest_card.suit}")
-            print()
             game.clear()
             players.append(players.pop())
 
