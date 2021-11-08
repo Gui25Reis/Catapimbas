@@ -1,0 +1,100 @@
+@import "../constant/mixins";
+@import "../constant/variables";
+
+.Menu {
+    @include width-height(auto, 100vh);
+
+    @include display (flex, center, space-evenly, column, legacy);
+
+    background-image: url(../assets/Background/fundo.svg);
+
+    h1 {
+        font-size: 96px;
+        font-family: Balsamiq Sans;
+        color: $wheat;
+    }
+}
+
+#informations {
+    @include width-height(50rem, 20rem);
+
+    @include display (flex, center, space-between, column, legacy);
+  
+    margin-bottom: 5rem;
+
+    #playerName {
+        @include width-height(30rem, 4rem);
+
+        font-size: 32px;
+        outline: none;
+        text-align: center;
+        color: $black;
+      
+        border-radius: 20px;
+        border: none;
+      
+        background-color: $wheat;
+    }
+
+    #createRoom {
+        @include width-height(30rem, 4rem);
+        
+        margin: 1rem 0rem;
+
+        border-radius: 20px;
+        border: none;
+
+        background-color: $wheat;
+        font-size: 32px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $lightBlue;
+        }
+    }
+
+    #codeInput {
+        @include display (flex, stretch, flex-start, row, legacy);
+    }
+
+    #key {
+        @include width-height(22rem, 4rem);
+      
+        font-size: 32px;
+        outline: none;
+        text-align: center;
+        color: $black;
+      
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: none;
+      
+        background-color: $wheat;
+    }
+
+    #pointerButton {
+        @include width-height(8rem, 4rem);
+
+        background-color: $wheat;
+        outline-style: none;
+        text-align: center;
+
+        font: {
+            family: none;
+            size: 18px;
+            weight: 900;
+        }
+   
+        border: {
+            bottom-right-radius: 20px;
+            top-right-radius: 20px;
+
+            top: none;
+            bottom: none;
+            right: none;
+        }
+        @include display (flex, stretch, center, row, legacy);
+    }
+}

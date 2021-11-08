@@ -1,7 +1,11 @@
 import React from "react";
 
-import "../styles/Create.css"
-import "../styles/fonts.css";
+import {
+  Link,
+  withRouter
+} from 'react-router-dom';
+
+import '../sass/app.css'
 
 function Create() {
     return(
@@ -35,8 +39,13 @@ function Create() {
                     </div>
                 </div>
                 <div className="menuButtons">
-                    <button className="back">Voltar</button>
-                    <button className="buttonCreate">Criar Sala</button>
+                    <Link to="/menu">
+                        <button className="back">Voltar</button>
+                    </Link>
+                    
+                    <Link to="/game">
+                        <button className="buttonCreate">Criar Sala</button>
+                    </Link>
                 </div>
             </div>
         </div>

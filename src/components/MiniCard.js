@@ -9,7 +9,7 @@ const MiniCard = (props) => {
                 src={require(`../assets/MiniCartas/${props.type}.svg`).default} 
                 alt="MiniCarta"
                 draggable="false" 
-                style={props.honeydew === true ? {opacity: "0.5"} : {opacity: "1"}}
+                style={props.honeydew === true ? {opacity: "0.25"} : {opacity: "1"}}
             />
         </div>
     )

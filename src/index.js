@@ -15,15 +15,18 @@ import Game from  './game/Game.js'
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <div>
-      <Route exact path="/">
-        <Menu />
-      </Route>
-      <Route path="/game">
-        <Game />
-      </Route>
-    </div>
-  </Router>
+      <div>
+        <Route exact path="/">
+          <Menu />
+        </Route>
+        <Route path="/game">
+          <Game />
+        </Route>
+        <Route path="/create">
+          <Create />
+        </Route>
+      </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

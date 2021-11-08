@@ -5,7 +5,7 @@ import {
   withRouter
 } from 'react-router-dom';
 
-import "../styles/menu.css";
+import '../sass/app.css'
 import "../styles/fonts.css";
 
 const Menu = () => {
@@ -64,11 +64,13 @@ const Menu = () => {
         style = {isNameFocused ? {backgroundColor: "#83bfe2"} : {}}
       />
       <div id="rooms"> 
-        <input 
-          type="button"
-          id="createRoom"
-          value="Criar Sala"
-        />
+        <Link to="/create">
+          <input 
+            type="button"
+            id="createRoom"
+            value="Criar Sala"
+          />
+        </Link>
         <div id="codeInput"> 
           <input
             required

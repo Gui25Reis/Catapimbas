@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import '../styles/game.css'
+import '../sass/app.css'
 
 import Card from '../components/Card';
 import MiniCard from '../components/MiniCard';
@@ -48,7 +48,7 @@ const Game = () => {
 
     function CreateMessage(e) {
         e.preventDefault();
-        let chat = document.getElementById("key")
+        let chat = document.getElementById("message")
         var newMessage = document.createElement("p");
         let messages = document.getElementById("chatText")
         let shouldScroll;
@@ -66,6 +66,8 @@ const Game = () => {
     function changeChat(e){
         let chat = document.getElementById("chat");
         let messages = document.getElementById("chatText")
+
+        console.log(chat)
         
         if(e === true){
             chat.style.backgroundColor = "wheat"
@@ -73,13 +75,27 @@ const Game = () => {
             for (let i = 0; i < messages.children.length; i++) 
                 messages.children[i].style.color = "black"
         }
-        else if(e === false) {
+        else if(e === false && chat !== null) {
             chat.style.backgroundColor = "#00000000";
             messages.style.overflowY = "hidden";
             for (let i = 0; i < messages.children.length; i++) 
                 messages.children[i].style.color = "#00000000"
         }
     }
+
+    // const createMiniCard = (card) => {        
+    //     return(
+    //         <MiniCard type= {`${card}Mini`} honeydew={false} />
+    //     )
+    // }
+
+    // function teste(e){
+    //     if(e.target.className === "imgCard"){
+    //         createMiniCard(e.target.id)
+    //     }
+    // }
+
+    const [card, setCard] = useState(false);
 
     document.addEventListener('keydown', (e) => {
         if(e.key === "Enter"){
@@ -88,6 +104,7 @@ const Game = () => {
     })
 
     document.addEventListener('click', (e) => {
+        console.log(e);
         if(e.target.className === "chatInput" || e.target.className === "buttonInput"){
             changeChat(true)
         }
@@ -98,9 +115,11 @@ const Game = () => {
     return(
         <div className="game">
             <div className="header">
-                <button className="menu">
-                    <p>Menu</p>
-                </button>
+                <div className="headerMenu">
+                    <button className="buttonMenu">
+                        <p>Menu</p>
+                    </button>
+                </div>
 
                 <div>
                     {Timer()}
@@ -117,7 +136,8 @@ const Game = () => {
                         <MiniCard type="C01Mini" honeydew={false} />
                     </div>
                     <div id="mainCard">
-
+                        {/* {createMiniCard} */}
+                        {/* <MiniCard type="P02Mini" honeydew={true} /> */}
                     </div>
                     <div id="card0">
                         <MiniCard type="P02Mini" honeydew={true} />
@@ -148,10 +168,6 @@ const Game = () => {
                     </div>
                 </div>          
 
-                <div id="mainPlayer">
-                    <Player name="Player" life={3}  />
-                </div>
-
                 <div id="player0">
                    <Player name="NomeDoJogador" life={3} />
                 </div>
@@ -179,6 +195,9 @@ const Game = () => {
                 <div id="player8">
                     <Player name="NomeDoJogador" life={3} />
                 </div>
+                <div id="player9">
+                   <Player name="NomeDoJogaddor" life={3} />
+                </div>
             </div>
 
             <div className="footer">
@@ -192,7 +211,7 @@ const Game = () => {
                                 <input 
                                     className="chatInput" 
                                     type="text"
-                                    id="key"
+                                    id="message"
                                     autoComplete="off"
                                     placeholder="Digite uma mensagem">                            
                                 </input>
@@ -204,8 +223,8 @@ const Game = () => {
                             </form>
                     </div>
                 </div>
-                
-                <div className="cards">
+                {/* onClick={teste} */}
+                <div className="cards" >
                     <Card type="E10" />
                     <Card type="C10" />
                     <Card type="P10" />

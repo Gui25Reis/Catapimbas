@@ -1,32 +1,32 @@
-.carta img {
+.card img {
     width: 8rem;
     height: 8rem;
 }
 
-.carta img:hover {
+.card img:hover {
     width: 10rem;
     height: 10rem;
 }
 
 @media only screen and (max-width: 1366px) and (max-height: 768px) {
-    .carta img {
+    .card img {
         width: 6rem;
         height: 6rem;
     }
     
-    .carta img:hover {
+    .card img:hover {
         width: 8rem;
         height: 8rem;
     }
 }
 
 @media only screen and (max-width: 1200px) {
-    .carta img {
+    .card img {
         width: 5rem;
         height: 5rem;
     }
     
-    .carta img:hover {
+    .card img:hover {
         width: 7rem;
         height: 7rem;
     }
@@ -34,12 +34,12 @@
 
 /* @media only screen  */
 @media only screen and (max-width: 820px) and (max-height: 700px) {
-    .carta img {
+    .card img {
         width: 3rem;
         height: 3rem;
     }
     
-    .carta img:hover {
+    .card img:hover {
         width: 4rem;
         height: 4rem;
     }
@@ -50,12 +50,12 @@
 }
 
 @media only screen and (max-width: 425px){
-    .carta img {
+    .card img {
         width: 3rem;
         height: 3rem;
     }
     
-    .carta img:hover {
+    .card img:hover {
         width: 5rem;
         height: 5rem;
     }

@@ -1,0 +1,13 @@
+@import "./components/all";
+
+@import "./constant/all";
+
+@import "./pages/all";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand;
+  user-select: none;
+  text-decoration: none;
+}
