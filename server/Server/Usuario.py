@@ -1,8 +1,10 @@
 from websockets.typing import Data as DataWebsocket
 import json
 
+from Server.Sala import Sala
 
-class Cliente:
+
+class Usuario:
     def __init__(self, servidor, websocket):
         self.cliente = websocket
         self.servidor = servidor
@@ -24,6 +26,7 @@ class Cliente:
                     msg_json = json.loads(mensagem)
                     print(msg_json)
                     await self.processa_comandos(msg_json)
+
                 else:
                     break
         except Exception as e:

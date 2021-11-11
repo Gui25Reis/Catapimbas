@@ -1,54 +1,83 @@
+from dataclasses import dataclass
 from websockets.typing import Data
 import websockets
 import asyncio
 
 from typing import List
+from Server.Sala import Sala
 
-from cliente import Cliente
+from Usuario import Usuario
+
+
+@dataclass
+class Conexao:
+    usuario: Usuario
+    sala: Sala
+
 
 class Servidor:
     def __init__(self) -> None:
-        self.conectados: List[Cliente] = []
+        self.conectados: List[Conexao] = []
 
     @property
-    def qunt_conectados(self) -> int:
+    def qtd_conectados(self) -> int:
         return len(self.conectados)
 
     async def conecta(self, websocket, path) -> None:
-        cliente = Cliente(self, websocket)
-        if cliente not in self.conectados:
-            self.conectados.append(cliente)
-            print(f"Novo cliente conectado({websocket.remote_address[0]} {websocket.remote_address[1]}). Total: {self.qunt_conectados}")
-        await cliente.gerencia()
+        usuario = Usuario(self, websocket)
+
+        if not self.verifica_usuario(usuario):
+            nova_conexao = Conexao(usuario, None)
+            self.conectados.append(nova_conexao)
+    
+            print(f"Novo usuário conectado({websocket.remote_address[0]} {websocket.remote_address[1]}). Total: {self.qtd_conectados}")
+        await usuario.gerencia()
 
 
-    def desconecta(self, cliente) -> None:
-        if cliente in self.conectados:
-            self.conectados.remove(cliente)
-        print(f"Cliente {cliente.nome} desconectado. Total: {self.qunt_conectados}")
-
-
-    async def envia_a_todos(self, origem:Cliente, mensagem) -> None:
-        for cliente in self.conectados:
-            if origem != cliente and cliente.conectado:
-                print(f"Enviando de <{origem.nome}> para <{cliente.nome}>: {mensagem}")
-                await cliente.envia(f"{origem.nome} >> {mensagem}")
-
-
-    async def envia_a_destinatario(self, origem, mensagem, destinatario) -> bool:
-        for cliente in self.conectados:
-            if cliente.nome == destinatario and origem != cliente and cliente.conectado:
-                print(f"Enviando de <{origem.nome}> para <{cliente.nome}>: {mensagem}")
-                await cliente.envia(f"PRIVADO de {origem.nome} >> {mensagem}")
+    def verifica_usuario(self, novo_usuario: Usuario) -> bool:
+        for u in self.conectados:
+            if u.usuario == novo_usuario:
                 return True
         return False
 
 
+    def desconecta(self, usuario) -> None:
+        if usuario in self.conectados:
+            self.conectados.remove(usuario)
+        print(f"Cliente {usuario.nome} desconectado. Total: {self.qtd_conectados}")
+
+
     def verifica_nome(self, nome) -> bool:
-        for cliente in self.conectados:
-            if cliente.nome and cliente.nome == nome:
+        for u in self.conectados:
+            if u.usuario.nome == nome:
                 return False
         return True
+
+
+    def cria_sala(self, conexao: Conexao) -> None:
+        nova_sala = Sala()
+        nova_sala.novo_jogador(conexao.usuario)
+
+        conexao.sala = nova_sala
+
+
+    def entra_sala(self, codigo: str, conexao: Conexao) -> None:
+        sala = self.verifica_codigo(codigo)
+        if sala == None:
+            # Envia uma mensagem para o usuario falando que deu erro
+            pass
+        else:
+            conexao.sala = sala
+            sala.novo_jogador(conexao.usuario)
+
+    def verifica_codigo(self, codigo: str) -> Sala:
+        for c in self.conectados:
+            if c.sala.get_idSala() == codigo:
+                return c.sala
+        return None
+
+
+
 
 
 
