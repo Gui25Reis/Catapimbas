@@ -4,15 +4,15 @@ import '../styles/card.css';
 
 const Card = (props) => {
     return(
-        <div className="carta" id={props.type}>
+        <div className="card">
             <img 
                 src={require(`../assets/Cartas/${props.type}.svg`).default} 
                 alt="Carta"
-                id = "teste"
+                id={props.type}
                 draggable="false" 
+                className="imgCard"
                 onClick={() => {
                     var el = document.getElementById(props.type)
-                    // createcard(props.type)
                     el.remove();
                 }}
             />

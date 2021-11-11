@@ -1,0 +1,6 @@
+.miniCarta {
+    @include width-height(3rem, 3rem);
+    img {
+        @extend .miniCarta
+    }
+}
