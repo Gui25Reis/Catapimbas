@@ -3,6 +3,7 @@
 [![Plataform](https://img.shields.io/badge/plataforma-Web-lightgrey?)]()
 [![License](https://img.shields.io/badge/licença-GNU%20v3.0-brightgreen?)](https://github.com/Gui25Reis/Catapimbas/blob/main/LICENSE)
 
+![Capa do GitHub](https://github.com/Gui25Reis/Catapimbas/blob/dev/arquivos/imagens/Capa-GitHub.png)
 
 O famoso fodinh@ vindo do truco mas web.
 
