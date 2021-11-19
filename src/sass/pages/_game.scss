@@ -1,6 +1,7 @@
 .game {
     @include width-height(100vw, 100vh);
-    @include background (url(../assets/Background/fundo.svg), center, no-repeat, cover, none);
+    @include background (url(../assets/Background/fundo.svg), center, no-repeat);
+    background-size: cover;
 
     flex-direction: column;
 }
@@ -8,7 +9,7 @@
 .header {
     width: 100vw;
 
-    @include display (flex, stretch, space-between, row, legacy);
+    @include display (flex, stretch, space-between, row);
 }
 
 .headerMenu {
@@ -36,7 +37,7 @@
     }
     
 
-    @include display (flex, center, left, row, legacy);
+    @include display (flex, center, left, row);
 
 }
 
@@ -53,7 +54,7 @@
 
     background-color: $wheat;
 
-    @include display (flex, center, center, row, legacy);
+    @include display (flex, center, center, row);
 
     p {
         margin-bottom: 0.3rem;
@@ -75,7 +76,7 @@
 }
 
 .lives {
-    @include display (flex, center, center, row, legacy);
+    @include display (flex, center, center, row);
 
     p {
         font-size: 1.5rem;
@@ -85,7 +86,8 @@
 #main {
     @include width-height(100vw, 70vh);
     
-    @include display (grid, center, none, row, center);
+    @include display (grid, center, none, row);
+    justify-items: center;
 
     grid-template:
 		". player0 player1 player2 ." 1fr
@@ -97,9 +99,11 @@
     #table {
         @include width-height(60vw, 40vh);
 
-        @include background (url(../assets/mesa.svg), center, no-repeat, 60vw, 50vh);
+        @include background (url(../assets/mesa.svg), center, no-repeat);
+        background-size: 60vw 50vh;
 
-        @include display (grid, center, none, row, center);
+        @include display (grid, center, none, row);
+        justify-items: center;
 
         grid-area: table;
 
@@ -206,7 +210,7 @@
 .footer {
     @include width-height(100vw, auto);
 
-    @include display (flex, stretch, space-between, row, legacy);
+    @include display (flex, stretch, space-between, row);
 
     bottom: 0;
 }
@@ -217,7 +221,7 @@
 
 #chatText {
     @include width-height(30vw, 11rem);
-    @include display (flex, stretch, flex-start, column, legacy);
+    @include display (flex, stretch, flex-start, column);
     overflow-y: auto;
 
     p {
@@ -229,13 +233,13 @@
     bottom: 0;
     position:absolute;
 
-    @include display (flex, flex-end, space-between, row, legacy);
+    @include display (flex, flex-end, space-between, row);
 
     font-size: 7.5rem;
     cursor: pointer;
 
     form {
-        @include display (flex, flex-start, flex-start, row, legacy);
+        @include display (flex, flex-start, flex-start, row);
         .chatInput {
             @include width-height(26.6vw, 2.1rem);
             
@@ -246,6 +250,14 @@
                 width: 1px;
                 right: none;
             }
+
+            &::placeholder {
+                color: $black;
+                opacity: 0.5;
+                font-size: 16px;
+                
+            }
+
             background-color: $wheat;
         }
     }
@@ -268,7 +280,7 @@
 .cards {
     @include width-height(60rem, 12rem);
 
-    @include display (flex, center, center, row, legacy);
+    @include display (flex, center, center, row);
 
     font-size: 0.5rem;
 }

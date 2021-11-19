@@ -3,17 +3,15 @@
     height: $height;
 }
 
-@mixin display ($display, $align, $justifyContent, $direction, $justifyItems) {
+@mixin display ($display, $align, $justifyContent, $direction) {
     display: $display;
     align-items: $align;
     justify-content: $justifyContent;
     flex-direction: $direction;
-    justify-items: $justifyItems;
 }
 
-@mixin background ($url, $position, $repeat, $width, $height) {
+@mixin background ($url, $position, $repeat) {
     background-image: $url;
     background-position: $position;
     background-repeat: $repeat;
-    background-size: $width $height;
 }

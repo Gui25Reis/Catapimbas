@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/minicard.css';
+import '../sass/app.css'
 
 const MiniCard = (props) => {
     return(

@@ -4,7 +4,7 @@
 .Menu {
     @include width-height(auto, 100vh);
 
-    @include display (flex, center, space-evenly, column, legacy);
+    @include display (flex, center, space-evenly, column);
 
     background-image: url(../assets/Background/fundo.svg);
 
@@ -18,7 +18,7 @@
 #informations {
     @include width-height(50rem, 20rem);
 
-    @include display (flex, center, space-between, column, legacy);
+    @include display (flex, center, space-between, column);
   
     margin-bottom: 5rem;
 
@@ -28,12 +28,17 @@
         font-size: 32px;
         outline: none;
         text-align: center;
-        color: $black;
+        
       
         border-radius: 20px;
         border: none;
       
         background-color: $wheat;
+
+        &::placeholder {
+            color: $black;
+            opacity: 0.5;
+        }
     }
 
     #createRoom {
@@ -51,12 +56,12 @@
         cursor: pointer;
 
         &:hover {
-            background-color: $lightBlue;
+            background-color: $lime;
         }
     }
 
     #codeInput {
-        @include display (flex, stretch, flex-start, row, legacy);
+        @include display (flex, stretch, flex-start, row);
     }
 
     #key {
@@ -65,13 +70,17 @@
         font-size: 32px;
         outline: none;
         text-align: center;
-        color: $black;
       
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         border: none;
       
         background-color: $wheat;
+
+        &::placeholder {
+            color: $black;
+            opacity: 0.5;
+        }
     }
 
     #pointerButton {
@@ -80,7 +89,6 @@
         background-color: $wheat;
         outline-style: none;
         text-align: center;
-
         font: {
             family: none;
             size: 18px;
@@ -95,6 +103,6 @@
             bottom: none;
             right: none;
         }
-        @include display (flex, stretch, center, row, legacy);
+        @include display (flex, stretch, center, row);
     }
 }

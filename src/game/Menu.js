@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import '../sass/app.css'
-import "../styles/fonts.css";
+// import "../styles/fonts.css";
 
 const Menu = () => {
   const [isNameFocused, setIsNameFocused] = useState(false);
@@ -61,7 +61,7 @@ const Menu = () => {
         onBlur={handleInputBlur}
         onInput={handleInputChange}
         onKeyDownCapture={handleKeyDown}
-        style = {isNameFocused ? {backgroundColor: "#83bfe2"} : {}}
+        style = {isNameFocused ? {backgroundColor: '#e1c78e'} : {}}
       />
       <div id="rooms"> 
         <Link to="/create">
@@ -85,14 +85,14 @@ const Menu = () => {
             onBlur={handleInputBlur}
             onInput={handleInputChange}
             onKeyDownCapture={handleKeyDown}
-            style = {isCodeFocused ? {backgroundColor: "#83bfe2"} : {}}
+            style = {isCodeFocused ? {backgroundColor: "#e1c78e"} : {}}
           />
           <Link to={code === 5 && name > 0 ? "/game" : '#'}> 
             <input 
               type="submit"
               id = "pointerButton"
               value = "➜"
-              style = {code === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "bold"} : {color: "#757575"}} 
+              style = {code === 5 ? {cursor: 'pointer', color: "#000", fontWeight: "#1c0c16"} : {color: "#757575"}} 
             > 
             </input>
           </Link>

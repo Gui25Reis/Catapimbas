@@ -169,34 +169,34 @@ const Game = () => {
                 </div>          
 
                 <div id="player0">
-                   <Player name="NomeDoJogador" life={3} />
+                   <Player player={true} host={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player1">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="5" />
                 </div>
                 <div id="player2">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player3">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player4">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player5">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player6">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="3" />
                 </div>        
                 <div id="player7">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={false} name="NomeDoJogador" life={3} cards="3" />
                 </div>
                 <div id="player8">
-                    <Player name="NomeDoJogador" life={3} />
+                    <Player player={true} name="NomeDoJogador" life={3} cards="4" />
                 </div>
                 <div id="player9">
-                   <Player name="NomeDoJogaddor" life={3} />
+                   <Player player={true} name="NomeDoJogaddor" life={3} cards="4" />
                 </div>
             </div>
 
