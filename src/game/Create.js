@@ -39,7 +39,7 @@ function Create() {
                     </div>
                 </div>
                 <div className="menuButtons">
-                    <Link to="/menu">
+                    <Link to="/">
                         <button className="back">Voltar</button>
                     </Link>
                     

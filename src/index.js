@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import './styles/index.css';
+// import './styles/index.css';
 
 import Create from './game/Create.js'
 import Menu from './game/Menu.js';
