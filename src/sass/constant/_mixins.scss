@@ -1,0 +1,17 @@
+@mixin width-height ($width, $height) {
+    width: $width; 
+    height: $height;
+}
+
+@mixin display ($display, $align, $justifyContent, $direction) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justifyContent;
+    flex-direction: $direction;
+}
+
+@mixin background ($url, $position, $repeat) {
+    background-image: $url;
+    background-position: $position;
+    background-repeat: $repeat;
+}
