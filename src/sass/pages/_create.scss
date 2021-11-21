@@ -1,0 +1,137 @@
+.createRoom {
+    height: 100vh;
+
+    background-image: url(../assets/Background/fundo.svg);
+    background-size: cover;
+
+    @include display (flex, center, space-evenly, column);
+
+    h1 {
+        font-size: 96px;
+        color: $wheat;
+    }
+}
+
+.menu {
+    background-color: $wheat;
+
+    @include display (flex, center, space-between, column);
+
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.qtPlayers {
+    width: 30rem;
+
+    @include display (flex, center, space-between, row);
+
+    p {
+        font-size: 40px;
+    }
+}
+
+#players {
+    @include width-height(5rem, 3.5rem);
+    font-size: 30px;
+    text-align: center;
+
+    background-color: $wheat;
+
+    border: {
+        color: $black;
+        style: solid;
+        width: 2px;
+        radius: 10px;
+    }
+
+    cursor: pointer;
+    outline-style: none;
+}
+
+.qtLives {
+    width: 30rem;
+
+    @include display (flex, center, space-between, row);
+
+    p {
+        font-size: 40px;
+    }
+}
+
+#lives {
+    @include width-height(5rem, 3.5rem);
+
+    border: {
+        color: $black;
+        style: solid;
+        width: 2px;
+        radius: 10px;
+    }
+
+    background-color: $wheat;
+
+    font-size: 30px;
+    text-align: center;
+
+    outline-style: none;
+    cursor: pointer;
+}
+
+.menuOptions {
+    height: 9rem;
+
+    @include display (flex, stretch, space-between, column);
+
+    margin-bottom: 3rem;
+}
+
+.menuButtons {
+    width: 30rem;
+
+    @include display (flex, stretch, space-between, row);
+}
+
+.buttonCreate {
+    background-color: $wheat;
+    font: {
+        size: 25px;
+        weight: bold;
+    }
+
+    @include width-height(14rem, 5rem);
+
+    border: {
+        color: $black;
+        style: solid;
+        width: 2px;
+        radius: 20px;
+    }
+
+    &:hover {
+        background-color: $lime;
+        cursor: pointer;
+    }
+}
+
+.back {
+    background-color: $wheat;
+    font: {
+        size: 25px;
+        weight: bold;
+    }
+    
+    @include width-height(14rem, 5rem);
+
+    border: {
+        color: $black;
+        style: solid;
+        width: 2px;
+        radius: 20px;
+    }
+    
+    &:hover {
+        background-color: $orange;
+        cursor: pointer;
+    }
+}

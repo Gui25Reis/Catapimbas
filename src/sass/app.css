@@ -1,0 +1,996 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+.card img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.card img:hover {
+  width: 10rem;
+  height: 10rem;
+}
+
+.miniCarta, .miniCarta img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.player {
+  width: 5vw;
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.player .playerName {
+  font-size: 16px;
+  text-align: center;
+  color: #f9f1c7;
+  margin-bottom: 2px;
+}
+
+.player .playerProfile {
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #f9e1c9;
+  border-radius: 20px;
+}
+
+.player .playerProfile .playerImage {
+  width: 4rem;
+  height: 4rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+}
+
+.cardsNumbers {
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cardsNumbers p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #1c0c16;
+}
+
+.cardsBack {
+  width: 2rem;
+  height: 2rem;
+}
+
+.playerslives {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.playerslives p {
+  font-size: 20px;
+}
+
+.playerOffline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.playerOffline .playerNameOff {
+  font-size: 16px;
+  text-align: center;
+  color: #f9f1c7;
+  margin-bottom: 2px;
+}
+
+.playerOffline .playerProfileOff {
+  width: 10rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #2a5a6a;
+  border-radius: 20px;
+}
+
+.playerOffline .playerProfileOff img {
+  width: 3rem;
+  height: 3rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+}
+
+/* @media only screen and (max-width: 1280px) and (max-height: 720px){
+    .player {
+        width: 3vw;
+        height: 3vh;
+
+    }
+    
+    .player p {
+        font-size: 12px;
+    }
+    
+    .player img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 820px) and (max-height: 700px){
+    .playerslives p {
+        font-size: 1.5rem;
+    }
+    
+    .player {
+        width: 3vw;
+        height: 3vh;
+    }
+    
+    .player p {
+        font-size: 10px;
+    }
+    
+    .player img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 425px){
+    .playerlives p {
+        font-size: 2rem;
+    }
+    
+    .player {
+        width: 2vw;
+        height: 2vh;
+    }
+    
+    .player p {
+        font-size: 8px;
+    }
+    
+    .player img {
+        width: 1rem;
+        height: 1rem;
+    }
+} */
+.game {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/Background/fundo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.headerMenu {
+  width: 12rem;
+  height: 4rem;
+  background-color: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.headerMenu .buttonMenu {
+  width: 8rem;
+  height: 4rem;
+  font-size: 7.5rem;
+  cursor: pointer;
+  border-bottom-right-radius: 20px;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #f9e1c9;
+  text-align: center;
+}
+
+.headerMenu .buttonMenu p {
+  font-size: 2rem;
+}
+
+.timer {
+  width: 6rem;
+  height: 4rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #f9e1c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.timer p {
+  margin-bottom: 0.3rem;
+  font-size: 3rem;
+}
+
+#playerLives {
+  width: 12rem;
+  height: 4rem;
+  border-bottom-left-radius: 20px;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #f9e1c9;
+}
+
+.lives {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.lives p {
+  font-size: 1.5rem;
+}
+
+#main {
+  width: 100vw;
+  height: 70vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  grid-template: ". player0 player1 player2 ." 1fr "player3 table table table player4" 1fr "player5 table table table player6" 1fr ". player7 player8 player9 ." 1fr / 4fr 3fr 3fr 3fr 4fr;
+}
+
+#main #table {
+  width: 60vw;
+  height: 40vh;
+  background-image: url(../assets/mesa.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60vw 50vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  grid-area: table;
+  grid-template: ". card0 card1 card2 ." 5fr "card3 . . . card4" 2fr ". . turned . ." 1fr "card5 . . . card6" 2fr ". card7 card8 card9 ." 5fr;
+}
+
+#turned {
+  grid-area: turned;
+}
+
+#card0 {
+  margin-top: 1rem;
+  grid-area: card0;
+}
+
+#card1 {
+  margin-top: 1rem;
+  grid-area: card1;
+}
+
+#card2 {
+  margin-top: 1rem;
+  grid-area: card2;
+}
+
+#card3 {
+  grid-area: card3;
+}
+
+#card4 {
+  grid-area: card4;
+}
+
+#card5 {
+  grid-area: card5;
+}
+
+#card6 {
+  grid-area: card6;
+}
+
+#card7 {
+  margin-bottom: 1rem;
+  grid-area: card7;
+}
+
+#card8 {
+  margin-bottom: 1rem;
+  grid-area: card8;
+}
+
+#card9 {
+  margin-bottom: 1rem;
+  grid-area: card9;
+}
+
+#player0 {
+  grid-area: player0;
+}
+
+#player1 {
+  grid-area: player1;
+}
+
+#player2 {
+  grid-area: player2;
+}
+
+#player3 {
+  grid-area: player3;
+}
+
+#player4 {
+  grid-area: player4;
+}
+
+#player5 {
+  grid-area: player5;
+}
+
+#player6 {
+  grid-area: player6;
+}
+
+#player7 {
+  grid-area: player7;
+}
+
+#player8 {
+  grid-area: player8;
+}
+
+#player9 {
+  grid-area: player9;
+}
+
+.footer {
+  width: 100vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 0;
+}
+
+#chat {
+  width: 30vw;
+  height: 13rem;
+}
+
+#chatText {
+  width: 30vw;
+  height: 11rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+}
+
+#chatText p {
+  font-size: 16px;
+}
+
+.chatFooter {
+  bottom: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 7.5rem;
+  cursor: pointer;
+}
+
+.chatFooter form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.chatFooter form .chatInput {
+  width: 26.6vw;
+  height: 2.1rem;
+  outline: none;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 1px;
+  border-right: none;
+  background-color: #f9e1c9;
+}
+
+.chatFooter form .chatInput::-webkit-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.chatFooter form .chatInput:-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.chatFooter form .chatInput::-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.chatFooter form .chatInput::placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.chatFooter .buttonInput {
+  width: 3.38vw;
+  height: 2.22rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+  background-color: #f9e1c9;
+  cursor: pointer;
+}
+
+.cards {
+  width: 60rem;
+  height: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 0.5rem;
+}
+
+.Menu {
+  width: auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../assets/Background/fundo.svg);
+}
+
+.Menu h1 {
+  font-size: 96px;
+  font-family: Balsamiq Sans;
+  color: #f9e1c9;
+}
+
+#informations {
+  width: 50rem;
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+#informations #playerName {
+  width: 30rem;
+  height: 4rem;
+  font-size: 32px;
+  outline: none;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  background-color: #f9e1c9;
+}
+
+#informations #playerName::-webkit-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #playerName:-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #playerName::-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #playerName::placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #createRoom {
+  width: 30rem;
+  height: 4rem;
+  margin: 1rem 0rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #f9e1c9;
+  font-size: 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#informations #createRoom:hover {
+  background-color: #c5e18f;
+}
+
+#informations #codeInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#informations #key {
+  width: 22rem;
+  height: 4rem;
+  font-size: 32px;
+  outline: none;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  background-color: #f9e1c9;
+}
+
+#informations #key::-webkit-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #key:-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #key::-ms-input-placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #key::placeholder {
+  color: #1c0c16;
+  opacity: 0.5;
+}
+
+#informations #pointerButton {
+  width: 8rem;
+  height: 4rem;
+  background-color: #f9e1c9;
+  outline-style: none;
+  text-align: center;
+  font-family: none;
+  font-size: 18px;
+  font-weight: 900;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.createRoom {
+  height: 100vh;
+  background-image: url(../assets/Background/fundo.svg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.createRoom h1 {
+  font-size: 96px;
+  color: #f9e1c9;
+}
+
+.menu {
+  background-color: #f9e1c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.qtPlayers {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.qtPlayers p {
+  font-size: 40px;
+}
+
+#players {
+  width: 5rem;
+  height: 3.5rem;
+  font-size: 30px;
+  text-align: center;
+  background-color: #f9e1c9;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.qtLives {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.qtLives p {
+  font-size: 40px;
+}
+
+#lives {
+  width: 5rem;
+  height: 3.5rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: #f9e1c9;
+  font-size: 30px;
+  text-align: center;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.menuOptions {
+  height: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.menuButtons {
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.buttonCreate {
+  background-color: #f9e1c9;
+  font-size: 25px;
+  font-weight: bold;
+  width: 14rem;
+  height: 5rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+}
+
+.buttonCreate:hover {
+  background-color: #c5e18f;
+  cursor: pointer;
+}
+
+.back {
+  background-color: #f9e1c9;
+  font-size: 25px;
+  font-weight: bold;
+  width: 14rem;
+  height: 5rem;
+  border-color: #1c0c16;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+}
+
+.back:hover {
+  background-color: #d64d32;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+/*# sourceMappingURL=app.css.map */
